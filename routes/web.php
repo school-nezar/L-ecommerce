@@ -25,3 +25,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //Admin logout 
 
 route::get('/logout',[AdminController::class, 'AdminLogout'])->name('user.logout');
+
+
+Route::prefix('admin')->group(function(){
+
+    Route::get('/user/profile',[AdminController::class, 'UserProfile'])->name('user.profile');
+    
+    
+    });
+    

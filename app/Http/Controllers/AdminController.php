@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -13,4 +14,17 @@ class AdminController extends Controller
 
         return Redirect()->route('login');
     }
+
+
+    public function UserProfile(){
+
+        $adminData = User::find(Auth::user()->id);
+        return view('backend.admin.admin_profile',compact('adminData'));
+
+    } // end mehtod 
+
+
+
+
+
 }
