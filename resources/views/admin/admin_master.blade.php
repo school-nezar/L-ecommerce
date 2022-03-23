@@ -26,6 +26,9 @@
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/semi-dark.css') }}" />
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/header-colors.css') }}" />
 	<title>Rukada - Responsive Bootstrap 5 Admin Template</title>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -171,6 +174,25 @@
 	  <script src="{{ asset('admin/assets/js/index.js') }}"></script>
 	<!--app JS-->
 	<script src="{{ asset('admin/assets/js/app.js') }}"></script>
+
+
+
+
+	
+	<script type="text/javascript">
+	 $(document).ready(function() {
+		$('#image').change(function(e) {
+		    var reader = new FileReader();
+		    reader.onload = function(e) {
+			   $('#showImage').attr('src', e.target.result);
+		    }
+		    reader.readAsDataURL(e.target.files['0']);
+		});
+	 });
+  </script>
+
+
+
 </body>
 
 </html>

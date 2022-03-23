@@ -1,6 +1,7 @@
 @extends('admin.admin_master')
 
 @section('admin')
+
     <div class="page-content">
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
@@ -136,9 +137,19 @@
                                        <h6 class="mb-0">photo</h6>
                                    </div>
                                    <div class="col-sm-9 text-secondary">
-                                       <input type="file" class="form-control" value="" />
+                                       <input type="file" class="form-control" value="" id="image"/>
                                    </div>
                                </div>
+
+                               <div class="mb-3">
+                                   <img id="showImage"  src=""  style="width:100px; height: 100px;">
+                                                   
+                               </div>
+
+
+
+
+
 
                                 <div class="row">
                                     <div class="col-sm-3"></div>
@@ -154,4 +165,8 @@
             </div>
         </div>
     </div>
+
+
+   
+
 @endsection
