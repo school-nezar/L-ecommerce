@@ -110,6 +110,11 @@
                     </div>
 
                     <div class="col-lg-8">
+
+
+                         <form method="post" action="{{ route('user.profile.store') }}" enctype="multipart/form-data">
+                              @csrf
+
                         <div class="card">
                             <div class="card-body">
                                 <div class="row mb-3">
@@ -157,9 +162,14 @@
                                         <input type="button" class="btn btn-primary px-4" value="Save Changes" />
                                     </div>
                                 </div>
+
+
                             </div>
                         </div>
                       
+
+                         </form>
+                   
                     </div>
                 </div>
             </div>
