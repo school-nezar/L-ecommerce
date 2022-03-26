@@ -26,10 +26,33 @@ class AdminController extends Controller
 
     public function UserProfileStore(Request $request){
 
+        $data = User::find(Auth::user()->id);
+        $data->name = $request->name;
+        $data->email = $request->email;
 
-        
+        if ($request->file('profile_photo_path')) {
 
+            $file = $request->file('profile_photo_path');
 
+            @unlink(public_path('upload/admin_images/'.$data->profile_photo_path));
+
+            // $file=avatar-1.png
+
+            $filename = date('YmdHi').$file->getClientOriginalName();
+
+            //$filename=26.3.2022.avatar-1
+
+            $file->move(public_path('upload/admin_images'),$filename);
+
+            $data['profile_photo_path'] = $filename;
+
+           
+        }
+
+        $data->save();
+        return redirect()->route('user.profile');
+
+      
     }
 
 
