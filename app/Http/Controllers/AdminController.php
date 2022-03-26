@@ -55,4 +55,11 @@ class AdminController extends Controller
 
         return redirect()->route('user.profile')->with($notification);
     }
+
+
+
+    public function ChangePassword(){
+        $adminData = User::find(Auth::user()->id);
+        return view('backend.admin.change_password', compact('adminData'));
+    }
 }

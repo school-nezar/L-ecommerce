@@ -33,7 +33,7 @@ Route::prefix('admin')->group(function(){
 
     Route::post('/user/profile/store',[AdminController::class, 'UserProfileStore'])->name('user.profile.store');
 
-    
+    Route::get('/user/change/password',[AdminController::class, 'ChangePassword'])->name('change.password');
     
     
     });
