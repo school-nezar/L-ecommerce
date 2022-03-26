@@ -39,7 +39,9 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-column align-items-center text-center">
-                                    <img src="assets/images/avatars/avatar-2.png" alt="Admin"
+                                    <img src="{{ !empty($adminData->profile_photo_path)?
+                                        url('upload/admin_images/' . $adminData->profile_photo_path):
+                                        url('upload/no_image.jpg') }}" alt="Admin"
                                         class="rounded-circle p-1 bg-primary" width="110">
                                     <div class="mt-3">
                                         <h4>John Doe</h4>
@@ -147,7 +149,9 @@
                                </div>
 
                                <div class="mb-3">
-                                   <img id="showImage"  src=""  style="width:100px; height: 100px;">
+                                   <img id="showImage"  src="{{ !empty($adminData->profile_photo_path)?
+                                       url('upload/admin_images/' . $adminData->profile_photo_path):
+                                       url('upload/no_image.jpg') }}"  style="width:100px; height: 100px;">
                                                    
                                </div>
 
