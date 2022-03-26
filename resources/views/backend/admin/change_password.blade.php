@@ -113,7 +113,7 @@
                     <div class="col-lg-8">
 
 
-                        <form method="post" action="{{ route('user.profile.store') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ route('update.password') }}">
                             @csrf
 
                             <div class="card">
@@ -125,7 +125,7 @@
                                             <h6 class="mb-0">Current Password</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="password" class="form-control" name="name"
+                                            <input type="password" class="form-control" name="oldpassword"
                                                  />
                                         </div>
                                     </div>
@@ -134,7 +134,7 @@
                                             <h6 class="mb-0">New Pssword</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="password" class="form-control" name="email"
+                                            <input type="password" name="password" class="form-control" name="email"
                                                 />
                                         </div>
                                     </div>
@@ -144,7 +144,7 @@
                                             <h6 class="mb-0">Confirm Pssword</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="password" class="form-control" name="email"
+                                            <input type="password" name="password_confirmation" class="form-control" name="email"
                                                 />
                                         </div>
                                     </div>
