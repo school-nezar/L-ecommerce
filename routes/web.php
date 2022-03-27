@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,4 +41,13 @@ Route::prefix('admin')->group(function(){
  
     
     });
+
+    Route::prefix('category')->group(function(){
+
+        Route::get('/all',[CategoryController::class, 'AllCategory'])->name('all.categories');
+
+
+    });
+
+
     
