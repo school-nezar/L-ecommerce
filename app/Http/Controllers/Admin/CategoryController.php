@@ -16,4 +16,20 @@ class CategoryController extends Controller
 
 
     }
+
+
+    public function   AddCategory(){
+
+        return view ('backend.category.addcategory');
+ 
+ 
+     }
+ 
+
+  
+
+
+
+  
+
 }

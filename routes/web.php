@@ -45,6 +45,10 @@ Route::prefix('admin')->group(function(){
     Route::prefix('category')->group(function(){
 
         Route::get('/all',[CategoryController::class, 'AllCategory'])->name('all.categories');
+        Route::get('/add',[CategoryController::class, 'AddCategory'])->name('add.category');
+
+       
+      
 
 
     });
