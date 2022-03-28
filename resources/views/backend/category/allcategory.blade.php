@@ -51,7 +51,7 @@
                                         <td>{{$row->category_name}}</td>
                                         <td><div class="d-flex align-items-center">
                                              <div class="recent-product-img">
-                                                 <img src=" {{ $row->category_image }} " alt="">
+                                                 <img src="{{ $row->category_image }}" alt="">
                                              </div>
 
                                          </div> </td>
