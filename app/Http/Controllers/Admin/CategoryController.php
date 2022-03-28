@@ -26,6 +26,21 @@ class CategoryController extends Controller
      }
  
 
+     public function StoreCategory(Request $request){
+
+       
+
+       
+
+
+
+
+
+
+
+     }
+
+     
   
 
 

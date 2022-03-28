@@ -47,7 +47,10 @@ Route::prefix('admin')->group(function(){
         Route::get('/all',[CategoryController::class, 'AllCategory'])->name('all.categories');
         Route::get('/add',[CategoryController::class, 'AddCategory'])->name('add.category');
 
+        Route::post('/store',[CategoryController::class, 'StoreCategory'])->name('category.store');
+
        
+        
       
 
 

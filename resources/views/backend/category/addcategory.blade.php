@@ -27,7 +27,7 @@
                  <div class="col-lg-8">
 
 
-                     <form method="post" action="" enctype="multipart/form-data">
+                     <form method="post" action="{{ route('category.store') }}" enctype="multipart/form-data">
                          @csrf
 
                          <div class="card">
@@ -39,7 +39,7 @@
                                          <h6 class="mb-0">Category Name</h6>
                                      </div>
                                      <div class="col-sm-9 text-secondary">
-                                         <input type="text" class="form-control" name="name"
+                                         <input type="text" class="form-control" name="category_name"
                                             />
                                      </div>
                                  </div>
@@ -51,7 +51,7 @@
                                          <h6 class="mb-0">Category image</h6>
                                      </div>
                                      <div class="col-sm-9 text-secondary">
-                                         <input type="file" class="form-control" name="profile_photo_path" value=""
+                                         <input type="file" class="form-control" name="category_image" value=""
                                              id="image" />
                                      </div>
                                  </div>
