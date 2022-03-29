@@ -53,8 +53,8 @@ Route::prefix('admin')->group(function(){
 
         Route::post('/update/{id}',[CategoryController::class, 'updateCategory'])->name('category.update');
       
-
-
+        Route::get('/delete/{id}',[CategoryController::class, 'DeleteCategory'])->name('category.delete');
+        
         
        
         

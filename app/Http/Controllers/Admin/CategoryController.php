@@ -123,5 +123,20 @@ class CategoryController extends Controller
 
 
 
+    public function DeleteCategory($id){
+
+        Category::findOrFail($id)->delete();
+        $notification = array(
+                'message' => 'Category Deleted Successfully',
+                'alert-type' => 'warning'
+            );
+            return redirect()->back()->with($notification);
+
+
+
+    }
+
+
+
 
 }
