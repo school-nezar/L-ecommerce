@@ -56,4 +56,19 @@ class CategoryController extends Controller
        
 
     }
+
+
+    public function EditCategory($id){
+
+        $category = Category::findOrFail($id);
+        return view('backend.category.category_edit',compact('category'));
+
+
+
+
+    }
+
+
+
+
 }
