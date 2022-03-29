@@ -50,8 +50,12 @@ Route::prefix('admin')->group(function(){
         Route::post('/store',[CategoryController::class, 'StoreCategory'])->name('category.store');
 
         Route::get('/edit/{id}',[CategoryController::class, 'EditCategory'])->name('category.edit');
+
+        Route::post('/update/{id}',[CategoryController::class, 'updateCategory'])->name('category.update');
       
 
+
+        
        
         
       

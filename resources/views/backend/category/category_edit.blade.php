@@ -27,7 +27,7 @@
                  <div class="col-lg-8">
 
 
-                     <form method="post" action="" enctype="multipart/form-data">
+                     <form method="post" action="{{ route('category.update',$category->id)  }}" enctype="multipart/form-data">
                          @csrf
                         
                          <div class="card">
