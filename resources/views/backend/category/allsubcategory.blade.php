@@ -24,7 +24,7 @@
           
                
               <div dir="rtl">
-               <a href=""><i title="add" class="fadeIn animated bx bx-message-square-add" style="font-size:25px;color:rgb(55, 206, 18);"></i> 
+               <a href="{{ route('add.subcategory') }}"><i title="add" class="fadeIn animated bx bx-message-square-add" style="font-size:25px;color:rgb(55, 206, 18);"></i> 
                </a>  
 
           </div>
