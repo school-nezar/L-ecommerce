@@ -13,3 +13,5 @@ yarn-error.log
 /.idea
 /.vscode
 resources/views/admin/admin_master.blade.php
+public/upload/category/202203281613.png
+public/upload/category/202203281621.png
