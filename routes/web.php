@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\SubCategoryController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
@@ -63,7 +64,7 @@ Route::prefix('admin')->group(function(){
 
     Route::prefix('subcategory')->group(function(){
 
-        Route::get('/all',[CategoryController::class, 'AllCategory'])->name('all.categories');
+        Route::get('/all',[SubCategoryController::class, 'AllSubCategory'])->name('all.subcategories');
         Route::get('/add',[CategoryController::class, 'AddCategory'])->name('add.category');
 
         Route::post('/store',[CategoryController::class, 'StoreCategory'])->name('category.store');
