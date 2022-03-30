@@ -41,7 +41,7 @@
                     </li>
                     <li> <a href="{{ route('all.subcategories') }}"><i class="bx bx-right-arrow-alt"></i>All SubCategory</a>
                     </li>
-                    <li> <a href="app-file-manager.html"><i class="bx bx-right-arrow-alt"></i>File Manager</a>
+                    <li> <a href="{{ route('all.products') }}"><i class="bx bx-right-arrow-alt"></i>Products list</a>
                     </li>
                     <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
                     </li>

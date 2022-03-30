@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductListController;
 use App\Http\Controllers\Admin\SubCategoryController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
@@ -78,6 +79,19 @@ Route::prefix('admin')->group(function(){
     
 
     });
+
+
+    Route::prefix('products')->group(function(){
+
+        Route::get('/all',[ProductListController::class, 'AllProductList'])->name('all.products');
+       
+        
+    
+
+    });
+
+
+
 
 
 
