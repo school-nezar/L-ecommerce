@@ -84,6 +84,12 @@ Route::prefix('admin')->group(function(){
     Route::prefix('products')->group(function(){
 
         Route::get('/all',[ProductListController::class, 'AllProductList'])->name('all.products');
+        Route::get('/add',[ProductListController::class, 'ADDProductList'])->name( 'add.product');
+
+        
+        
+
+       
        
         
     

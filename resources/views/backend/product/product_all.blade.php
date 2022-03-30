@@ -9,7 +9,7 @@
           <h5 class="mb-0">All Product </h5>
      </div>
      <div class="font-16 ms-auto">
-          <a href=""><i title="add" class="fadeIn animated bx bx-message-square-add" style="font-size:25px;color:rgb(55, 206, 18);"></i> 
+          <a href="{{ route('add.product') }}"><i title="add" class="fadeIn animated bx bx-message-square-add" style="font-size:25px;color:rgb(55, 206, 18);"></i> 
      </div>
 </div>
 <hr>

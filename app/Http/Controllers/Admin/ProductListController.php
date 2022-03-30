@@ -13,7 +13,15 @@ class ProductListController extends Controller
         $products = ProductList::latest()->paginate(6);
         return view('backend.product.product_all',compact('products'));
 
-
-
     }
+
+
+    public function  ADDProductList(){
+
+        return view('backend.product.product_add');
+    }
+    
+
+
+   
 }

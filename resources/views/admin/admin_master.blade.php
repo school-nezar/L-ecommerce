@@ -29,6 +29,9 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="{{ asset('admin/assets/plugins/input-tags/css/tagsinput.css') }}" rel="stylesheet" />
+
+	
 </head>
 
 <body>
@@ -253,6 +256,8 @@ $(function(){
   });
 	
 </script>
+
+<script src="{{ asset('admin/assets/plugins/input-tags/js/tagsinput.js') }}"></script>
 
 
 </body>
