@@ -44,11 +44,19 @@ $notification = array(
 );
 return redirect()->route('all.subcategories')->with($notification);
 
-   
+ 
+}
 
-   
 
 
+public function DeleteSubCategory($id){
+
+    SubCategory::findOrFail($id)->delete();
+    $notification = array(
+            'message' => 'subCategory Deleted Successfully',
+            'alert-type' => 'warning'
+        );
+        return redirect()->back()->with($notification);
 }
 
 
