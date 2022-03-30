@@ -25,5 +25,33 @@ public function AddSubCategory(){
 }
 
 
+public function StoreSubCategory(Request $request){
+
+  
+    $request->validate([
+        'category_name' => 'required',
+        'subcategory_name' => 'required',
+   ]);
+
+   Subcategory::insert([
+    'category_name' => $request->category_name,
+    'subcategory_name' => $request->subcategory_name,
+]);
+
+$notification = array(
+    'message' => 'SubCategory Inserted Successfully',
+    'alert-type' => 'success'
+);
+return redirect()->route('all.subcategories')->with($notification);
+
+   
+
+   
+
+
+}
+
+
+
 
 }
