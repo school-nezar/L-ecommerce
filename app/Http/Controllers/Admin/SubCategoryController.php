@@ -60,6 +60,30 @@ public function DeleteSubCategory($id){
 }
 
 
+public function EditSubCategory($id){
+  
+
+    $Category = Category::orderBy('category_name','ASC')->get();
+    $subcategory = SubCategory::findOrFail($id);
+    return view('backend.category.subcategory_edit',compact('subcategory','Category'));
+
+}
+
+public function updateSubCategory(Request $request,$id){
+
+    Subcategory::findOrFail($id)->update([
+        'category_name' => $request->category_name,
+        'subcategory_name' => $request->subcategory_name,
+    ]);
+    $notification = array(
+        'message' => 'SubCategory Updated Successfully',
+        'alert-type' => 'success'
+    );
+    return redirect()->route('all.subcategories')->with($notification);
+    
+
+}
+
 
 
 }

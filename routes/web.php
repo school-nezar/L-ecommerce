@@ -69,9 +69,9 @@ Route::prefix('admin')->group(function(){
 
         Route::post('/store',[SubCategoryController::class, 'StoreSubCategory'])->name('subcategory.store');
 
-        Route::get('/edit/{id}',[CategoryController::class, 'EditCategory'])->name('category.edit');
+        Route::get('/edit/{id}',[SubCategoryController::class, 'EditSubCategory'])->name('subcategory.edit');
 
-        Route::post('/update/{id}',[CategoryController::class, 'updateCategory'])->name('category.update');
+        Route::post('/update/{id}',[SubCategoryController::class, 'updateSubCategory'])->name('subcategory.update');
       
         Route::get('/delete/{id}',[SubCategoryController::class, 'DeleteSubCategory'])->name('subcategory.delete');
         
