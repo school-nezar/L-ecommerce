@@ -77,6 +77,7 @@ Route::prefix('admin')->group(function(){
         Route::get('/delete/{id}',[SubCategoryController::class, 'DeleteSubCategory'])->name('subcategory.delete');
         
     
+        Route::get('/ajax/{category_id}', [SubCategoryController::class, 'GetSubCategory']);
 
     });
 
@@ -85,6 +86,8 @@ Route::prefix('admin')->group(function(){
 
         Route::get('/all',[ProductListController::class, 'AllProductList'])->name('all.products');
         Route::get('/add',[ProductListController::class, 'ADDProductList'])->name( 'add.product');
+
+        
 
         
         

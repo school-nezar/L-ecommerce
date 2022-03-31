@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\ProductList;
+use App\Models\Category;
 
 class ProductListController extends Controller
 {
@@ -18,7 +19,8 @@ class ProductListController extends Controller
 
     public function  ADDProductList(){
 
-        return view('backend.product.product_add');
+        $category = Category::orderBy('category_name','ASC')->get();
+        return view('backend.product.product_add',compact('category'));
     }
     
 

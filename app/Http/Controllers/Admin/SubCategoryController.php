@@ -85,5 +85,11 @@ public function updateSubCategory(Request $request,$id){
 }
 
 
+public function GetSubCategory($category_id){
+    $subcat = SubCategory::where('category_name',$category_id)->orderBy('subcategory_name','ASC')->get();
+    return json_encode($subcat);
+}
+
+
 
 }
