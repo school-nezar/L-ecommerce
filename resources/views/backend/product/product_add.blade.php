@@ -10,7 +10,7 @@
 <hr>
 <div class="form-body mt-4">
 
-<form method="post" action="" enctype="multipart/form-data">
+<form method="post" action="{{ route('product.store') }}" enctype="multipart/form-data">
      @csrf
 
 
