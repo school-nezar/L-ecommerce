@@ -92,6 +92,10 @@ Route::prefix('admin')->group(function(){
         Route::get('/delete/{id}',[ProductListController::class, 'DeleteProduct'])->name('product.delete');
 
         Route::get('/edit/{id}',[ProductListController::class, 'EditProduct'])->name('product.edit');
+
+
+        Route::post('/update/{id}',[ProductListController::class, 'updateProduct'])->name( 'product.update');
+       
       
     
 
