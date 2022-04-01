@@ -88,6 +88,8 @@ Route::prefix('admin')->group(function(){
         Route::get('/add',[ProductListController::class, 'ADDProductList'])->name( 'add.product');
 
         Route::post('/store',[ProductListController::class, 'StoreProduct'])->name( 'product.store');
+
+        Route::get('/delete/{id}',[ProductListController::class, 'DeleteProduct'])->name('product.delete');
       
     
 
