@@ -137,8 +137,21 @@ public function DeleteProduct($id){
 
 
 
+}
+
+
+public function EditProduct($id){
+
+    $category = Category::orderBy('category_name','ASC')->get();
+    $product=ProductList::findOrfail($id);
+    $details=ProductDetails::where('product_id',$id)->first();
+    
+    return view('backend.product.product_edit',compact('category','product','details'));
+   
+
 
 }
+
 
 
    

@@ -90,6 +90,8 @@ Route::prefix('admin')->group(function(){
         Route::post('/store',[ProductListController::class, 'StoreProduct'])->name( 'product.store');
 
         Route::get('/delete/{id}',[ProductListController::class, 'DeleteProduct'])->name('product.delete');
+
+        Route::get('/edit/{id}',[ProductListController::class, 'EditProduct'])->name('product.edit');
       
     
 
