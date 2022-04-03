@@ -1,10 +1,10 @@
 <div class="sidebar-wrapper" data-simplebar="true">
      <div class="sidebar-header">
           <div>
-               <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+               <img src="{{ asset('admin/assets/images/ctp.png') }}" class="logo-icon" alt="logo icon">
           </div>
           <div>
-               <h4 class="logo-text">Rukada</h4>
+               <h4 class="logo-text">Creative Team </h4>
           </div>
           <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
           </div>
@@ -12,23 +12,12 @@
      <!--navigation-->
      <ul class="metismenu" id="menu">
           <li>
-               <a href="javascript:;" class="has-arrow">
+               <a href="/dashboard" class="has-arrow">
                     <div class="parent-icon"><i class='bx bx-home-circle'></i>
                     </div>
-                    <div class="menu-title">Dashboard</div>
+                    <div class="menu-title">Home</div>
                </a>
-               <ul>
-                    <li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Default</a>
-                    </li>
-                    <li> <a href="dashboard-eCommerce.html"><i class="bx bx-right-arrow-alt"></i>eCommerce</a>
-                    </li>
-                    <li> <a href="dashboard-analytics.html"><i class="bx bx-right-arrow-alt"></i>Analytics</a>
-                    </li>
-                    <li> <a href="dashboard-digital-marketing.html"><i class="bx bx-right-arrow-alt"></i>Digital Marketing</a>
-                    </li>
-                    <li> <a href="dashboard-human-resources.html"><i class="bx bx-right-arrow-alt"></i>Human Resources</a>
-                    </li>
-               </ul>
+              
           </li>
           <li>
                <a href="javascript:;" class="has-arrow">
@@ -43,39 +32,25 @@
                     </li>
                     <li> <a href="{{ route('all.products') }}"><i class="bx bx-right-arrow-alt"></i>Products list</a>
                     </li>
-                    <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
-                    </li>
-                    <li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Todo List</a>
-                    </li>
-                    <li> <a href="app-invoice.html"><i class="bx bx-right-arrow-alt"></i>Invoice</a>
-                    </li>
-                    <li> <a href="app-fullcalender.html"><i class="bx bx-right-arrow-alt"></i>Calendar</a>
-                    </li>
+                    
                </ul>
           </li>
           <li class="menu-label">UI Elements</li>
-          <li>
-               <a href="widgets.html">
-                    <div class="parent-icon"><i class='bx bx-cookie'></i>
-                    </div>
-                    <div class="menu-title">Widgets</div>
-               </a>
-          </li>
+          
           <li>
                <a href="javascript:;" class="has-arrow">
                     <div class="parent-icon"><i class='bx bx-cart'></i>
                     </div>
-                    <div class="menu-title">eCommerce</div>
+                    <div class="menu-title">Orders</div>
                </a>
                <ul>
-                    <li> <a href="ecommerce-products.html"><i class="bx bx-right-arrow-alt"></i>Products</a>
+                    <li> <a href="ecommerce-products.html"><i class="bx bx-right-arrow-alt"></i>Pending orders</a>
                     </li>
-                    <li> <a href="ecommerce-products-details.html"><i class="bx bx-right-arrow-alt"></i>Product Details</a>
+                    <li> <a href="ecommerce-products-details.html"><i class="bx bx-right-arrow-alt"></i>Processing orders</a>
                     </li>
-                    <li> <a href="ecommerce-add-new-products.html"><i class="bx bx-right-arrow-alt"></i>Add New Products</a>
+                    <li> <a href="ecommerce-add-new-products.html"><i class="bx bx-right-arrow-alt"></i>complete orders</a>
                     </li>
-                    <li> <a href="ecommerce-orders.html"><i class="bx bx-right-arrow-alt"></i>Orders</a>
-                    </li>
+                   
                </ul>
           </li>
           <li>
