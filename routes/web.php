@@ -5,6 +5,9 @@ use App\Http\Controllers\Admin\ProductListController;
 use App\Http\Controllers\Admin\SubCategoryController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\ProductCartController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -103,7 +106,11 @@ Route::prefix('admin')->group(function(){
 
     Route::prefix('order')->group(function(){
 
-        
+        Route::get('/pending',[ProductCartController::class, 'PendingOrder'])->name('pending.order');
+        Route::get('/proccessing',[ProductCartController::class, 'ProcessingOrder'])->name('processing.order');
+        Route::get('/complete',[ProductCartController::class, 'CompleteOrder'])->name('complete.order');
+
+
 
     });
 

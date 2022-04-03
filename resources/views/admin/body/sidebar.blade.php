@@ -44,11 +44,11 @@
                     <div class="menu-title">Orders</div>
                </a>
                <ul>
-                    <li> <a href="ecommerce-products.html"><i class="bx bx-right-arrow-alt"></i>Pending orders</a>
+                    <li> <a href="{{ route('pending.order') }}"><i class="bx bx-right-arrow-alt"></i>Pending orders</a>
                     </li>
-                    <li> <a href="ecommerce-products-details.html"><i class="bx bx-right-arrow-alt"></i>Processing orders</a>
+                    <li> <a href="{{ route('processing.order') }}"><i class="bx bx-right-arrow-alt"></i>Processing orders</a>
                     </li>
-                    <li> <a href="ecommerce-add-new-products.html"><i class="bx bx-right-arrow-alt"></i>complete orders</a>
+                    <li> <a href="{{ route('complete.order') }}"><i class="bx bx-right-arrow-alt"></i>complete orders</a>
                     </li>
                    
                </ul>

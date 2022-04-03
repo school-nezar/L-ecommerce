@@ -7,5 +7,17 @@ use Illuminate\Http\Request;
 
 class ProductCartController extends Controller
 {
-    //
+    public function PendingOrder(){
+
+    }
+
+
+    public function ProcessingOrder(){
+        
+    }
+
+    public function CompleteOrder(){
+        
+    }
+
 }
