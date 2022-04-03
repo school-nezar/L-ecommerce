@@ -95,9 +95,15 @@ Route::prefix('admin')->group(function(){
 
 
         Route::post('/update/{id}',[ProductListController::class, 'updateProduct'])->name( 'product.update');
-       
       
-    
+
+    });
+
+
+
+    Route::prefix('order')->group(function(){
+
+        
 
     });
 
