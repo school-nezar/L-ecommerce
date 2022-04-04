@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div>
-                            <h5 class="mb-0">All Pending Order </h5>
+                            <h5 class="mb-0">All complete Orders </h5>
                         </div>
                         <div class="font-22 ms-auto"><i class="bx bx-dots-horizontal-rounded"></i>
                         </div>
@@ -46,7 +46,7 @@
                                         </td>
 
                                         <td>
-                                            <a href=""
+                                            <a id="delete" href="{{ route('order.delete', $item->id) }}"
                                                 class="btn btn-danger">Delete </a>
 
                                         </td>

@@ -71,10 +71,10 @@
                                             </li>
                                             <br>
                                             @if ($order->order_status == 'Pending')
-                                                <a href=""
+                                                <a href="{{ route('pending.processing', $order->id) }}"
                                                     class="btn btn-block btn-warning"> Processing Order</a>
                                             @elseif($order->order_status == 'Processing')
-                                                <a href=""
+                                                <a href="{{ route('processing.complete', $order->id) }}"
                                                     class="btn btn-block btn-success"> Complete Order</a>
                                             @endif
                                         </ul>
