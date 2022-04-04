@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\SubCategoryController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductCartController;
+use App\Http\Controllers\Admin\ContactController;
+
 
 
 
@@ -117,6 +119,14 @@ Route::prefix('admin')->group(function(){
         Route::get('/status/complete/{id}', [ProductCartController::class, 'ProcessingToComplete'])->name('processing.complete');
 
         Route::get('/delete/{id}', [ProductCartController::class, 'OrderDelete'])->name('order.delete');
+
+    });
+
+
+    Route::prefix('contact')->group(function(){
+
+        Route::get('/all/messages',[ContactController::class, 'AllMessages'])->name('all.message');
+       
 
     });
 
