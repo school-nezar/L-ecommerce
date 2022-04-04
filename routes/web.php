@@ -126,7 +126,10 @@ Route::prefix('admin')->group(function(){
     Route::prefix('contact')->group(function(){
 
         Route::get('/all/messages',[ContactController::class, 'AllMessages'])->name('all.message');
+
+        Route::get('/message/delete/{id}', [ContactController::class, 'DeleteMessage'])->name('message.delete');
        
+
 
     });
 
