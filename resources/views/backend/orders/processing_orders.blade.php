@@ -46,7 +46,7 @@
                                         </td>
 
                                         <td>
-                                            <a href=""
+                                            <a href="{{ route('order.details', $item->id) }}"
                                                 class="btn btn-info">Details </a>
 
                                         </td>
