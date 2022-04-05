@@ -34,6 +34,7 @@
                                         <td>{{ $item->email }}</td>
                                         <td>{{ Str::limit($item->message, 25, '..') }}</td>
                                         <td>{{ $item->contact_date }}</td>
+                                        <td hidden>{{ $item->message }}</td>
                                     
 
                                         <td><a class="viewbtn"><i title="show" class="fadeIn animated bx bx-show-alt" style="font-size:25px;color:rgb(47, 26, 165);"></i> </a>
@@ -91,6 +92,18 @@
                 $('.viewbtn').on('click',function(){
                    $('#exampleModal').modal('show');
          
+                   $tr=$(this).closest('tr');
+         
+         var data=$tr.children("td").map(function(){
+            return $(this).text();
+         }).get();
+  
+       
+         $('#id').val(data[0]);
+         $('#name').val(data[1]);
+         $('#email').val(data[2]);
+         $('#message').val(data[5]);
+                  
          
                       });
                    });
