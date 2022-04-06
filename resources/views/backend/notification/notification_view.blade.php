@@ -40,7 +40,7 @@
                                         <td>{{ Str::limit($item->message, 25, '..') }}</td>
                                         <td>{{ $item->date }}</td>
                                        
-                                        <td><a href=""><i title="edit" class="fadeIn animated bx bx-message-square-edit" style="font-size:25px;color:rgb(47, 26, 165);"></i> </a>
+                                        <td><a class="editbtn"><i title="edit" class="fadeIn animated bx bx-message-square-edit" style="font-size:25px;color:rgb(47, 26, 165);"></i> </a>
                                              <a href="{{ route('notificcation.delete',$item->id) }}" id="delete" ><i title="delete"   class="fadeIn animated bx bx-trash" style="font-size:25px;color:rgb(233, 19, 30);"></i> </a>
                                         </td>
 
@@ -58,5 +58,71 @@
 
         </div>
     </div>
+
+
+
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-l">
+         <div class="modal-content">
+            <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">Update notfication</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+             <form>
+               <div class="mb-1">
+                 <label for="recipient-name" class="col-form-label">title</label>
+                 <input type="text" class="form-control" id="title" >
+               </div>
+               <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Date</label>
+                  <input type="text" class="form-control" id="date" >
+                 </div>
+               <div class="mb-3">
+                 <label for="message-text" class="col-form-label">Message:</label>
+                 <textarea class="form-control" rows="10" id="message" ></textarea>
+               </div>
+             </form>
+            </div>
+            <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+             <button type="sumbit" class="btn btn-danger" >update</button>
+
+
+           
+            </div>
+          </div>
+     </div>
+    </div>
+  
+  
+    <script>
+     $(document).ready(function(){
+         $('.editbtn').on('click',function(){
+            $('#exampleModal').modal('show');
+  
+            $tr=$(this).closest('tr');
+  
+         var data=$tr.children("td").map(function(){
+            return $(this).text();
+         }).get();
+  
+       
+         $('#id').val(data[0]);
+         $('#title').val(data[1]);
+         $('#message').val(data[2]);
+         $('#date').val(data[3]);
+  
+  
+               });
+            });
+  
+  </script>
+
+
+
+
+
 
 @endsection
