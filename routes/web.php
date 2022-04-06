@@ -7,6 +7,8 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductCartController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\NotificationController;
+
 
 
 
@@ -128,6 +130,17 @@ Route::prefix('admin')->group(function(){
         Route::get('/all/messages',[ContactController::class, 'AllMessages'])->name('all.message');
 
         Route::get('/message/delete/{id}', [ContactController::class, 'DeleteMessage'])->name('message.delete');
+       
+
+
+    });
+
+
+    Route::prefix('notification')->group(function(){
+
+        Route::get('/all/notification',[NotificationController::class, 'AllNotification'])->name('all.notification');
+
+       
        
 
 
