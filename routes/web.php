@@ -139,6 +139,9 @@ Route::prefix('admin')->group(function(){
     Route::prefix('notification')->group(function(){
 
         Route::get('/all/notification',[NotificationController::class, 'AllNotification'])->name('all.notification');
+        Route::get('/add/notification',[NotificationController::class, 'ADDNotification'])->name('add.notification');
+
+        Route::post('/store',[NotificationController::class, 'StoreNotification'])->name('notification.store');
 
        
        
