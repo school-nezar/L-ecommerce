@@ -145,7 +145,9 @@ Route::prefix('admin')->group(function(){
 
         Route::get('/delete/notification/{id}',[NotificationController::class, 'DeleteNotification'])->name('notificcation.delete');
 
-       
+
+        Route::post('/update',[NotificationController::class, 'UpdateNotification'])->name('update.notification');
+      
 
        
        

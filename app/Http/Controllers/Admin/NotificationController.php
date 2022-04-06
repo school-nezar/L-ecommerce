@@ -64,6 +64,30 @@ public function DeleteNotification($id){
 
 }
 
+public function UpdateNotification(Request $request){
+
+    $notify_id = $request->id;
+
+    Notification::findOrFail($notify_id)->update([
+        'title' => $request->title,
+        'message' => $request->message,
+        'date' => $request->date,
+
+    ]);
+
+    $notification = array(
+        'message' => 'Notification Updated  Successfully',
+        'alert-type' => 'success'
+    );
+
+    return redirect()->route('all.notification')->with($notification);
+
+    
+
+
+
+}
+
 
 
 
