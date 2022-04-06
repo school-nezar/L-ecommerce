@@ -48,9 +48,24 @@ public function StoreNotification(Request $request){
     return redirect()->route('all.notification')->with($notification);
 
 
+}
+
+public function DeleteNotification($id){
+
+    Notification::findOrFail($id)->delete();
+
+    $notification = array(
+            'message' => 'Notification Deleted Successfully',
+            'alert-type' => 'warning'
+        );
+
+        return redirect()->back()->with($notification);
 
 
 }
+
+
+
 
 
 

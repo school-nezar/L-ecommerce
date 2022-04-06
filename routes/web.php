@@ -143,6 +143,10 @@ Route::prefix('admin')->group(function(){
 
         Route::post('/store',[NotificationController::class, 'StoreNotification'])->name('notification.store');
 
+        Route::get('/delete/notification/{id}',[NotificationController::class, 'DeleteNotification'])->name('notificcation.delete');
+
+       
+
        
        
 

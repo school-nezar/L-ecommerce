@@ -41,7 +41,7 @@
                                         <td>{{ $item->date }}</td>
                                        
                                         <td><a href=""><i title="edit" class="fadeIn animated bx bx-message-square-edit" style="font-size:25px;color:rgb(47, 26, 165);"></i> </a>
-                                             <a href="" id="delete" ><i title="delete"   class="fadeIn animated bx bx-trash" style="font-size:25px;color:rgb(233, 19, 30);"></i> </a>
+                                             <a href="{{ route('notificcation.delete',$item->id) }}" id="delete" ><i title="delete"   class="fadeIn animated bx bx-trash" style="font-size:25px;color:rgb(233, 19, 30);"></i> </a>
                                         </td>
 
 
