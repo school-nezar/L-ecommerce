@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <form method="post" action="" enctype="multipart/form-data">
+                    <form method="post" action="{{ route('slider.update') }}" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" class="form-control" id="id" name="id">
 

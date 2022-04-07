@@ -70,6 +70,49 @@ class SliderController extends Controller
     }
 
 
+    public function UpdateSlider(Request $request){
+
+        $slider_id=$request->id;
+
+        if($request->file('slider_image')){
+
+            $file = $request->file('slider_image');
+              // $file=avatar-1.png
+
+          
+            $filename = date('YmdHi').'.'.$file->getClientOriginalExtension();
+    
+            //$filename=26.3.2022.png
+    
+            $file->move(public_path('upload/slider'), $filename);
+    
+            $save_url = 'http://127.0.0.1:8000/upload/slider/'.$filename ;  
+
+
+
+            HomeSlider::findOrFail($slider_id)->update([
+               
+                'slider_image' =>  $save_url,
+                'updated_at'=>Now()
+            ]);
+    
+            $notification = array(
+                'message' => 'slider updated Successfully with image',
+                'alert-type' => 'success'
+            );
+            return redirect()->route('all.sliders')->with($notification);
+
+
+        }
+
+
+
+       
+
+        
+    }
+
+
 
 
 }

@@ -163,7 +163,7 @@ Route::prefix('admin')->group(function(){
         Route::get('/delete/slider/{id}',[SliderController::class, 'DeleteSlider'])->name('slider.delete');
 
 
-        Route::post('/update',[NotificationController::class, 'UpdateNotification'])->name('update.notification');
+        Route::post('/update',[SliderController::class, 'UpdateSlider'])->name('slider.update');
      
 
     });
