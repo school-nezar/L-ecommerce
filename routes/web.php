@@ -160,7 +160,7 @@ Route::prefix('admin')->group(function(){
 
         Route::post('/store',[SliderController::class, 'StoreSlider'])->name('slider.store');
 
-        Route::get('/delete/notification/{id}',[NotificationController::class, 'DeleteNotification'])->name('notificcation.delete');
+        Route::get('/delete/slider/{id}',[SliderController::class, 'DeleteSlider'])->name('slider.delete');
 
 
         Route::post('/update',[NotificationController::class, 'UpdateNotification'])->name('update.notification');

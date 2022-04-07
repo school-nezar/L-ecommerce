@@ -57,5 +57,19 @@ class SliderController extends Controller
 
 
 
+    public function DeleteSlider($id){
+
+        HomeSlider::findOrFail($id)->delete();
+        $notification = array(
+                'message' => 'Slider Deleted Successfully',
+                'alert-type' => 'warning'
+            );
+            return redirect()->back()->with($notification);
+
+
+    }
+
+
+
 
 }
