@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductCartController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\NotificationController;
+use App\Http\Controllers\Admin\SliderController;
 
 
 
@@ -147,11 +148,23 @@ Route::prefix('admin')->group(function(){
 
 
         Route::post('/update',[NotificationController::class, 'UpdateNotification'])->name('update.notification');
-      
+     
 
-       
-       
+    });
 
+
+    Route::prefix('slider')->group(function(){
+
+        Route::get('/all/sliders',[SliderController::class, 'AllSliders'])->name('all.sliders');
+        Route::get('/add/notification',[NotificationController::class, 'ADDNotification'])->name('add.notification');
+
+        Route::post('/store',[NotificationController::class, 'StoreNotification'])->name('notification.store');
+
+        Route::get('/delete/notification/{id}',[NotificationController::class, 'DeleteNotification'])->name('notificcation.delete');
+
+
+        Route::post('/update',[NotificationController::class, 'UpdateNotification'])->name('update.notification');
+     
 
     });
 

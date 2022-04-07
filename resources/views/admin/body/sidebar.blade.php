@@ -81,6 +81,21 @@
                </ul>
           </li>
 
+
+
+          <li>
+               <a class="has-arrow" href="javascript:;">
+                    <div class="parent-icon"><i class='bx bx-repeat'></i>
+                    </div>
+                    <div class="menu-title">Slider</div>
+               </a>
+               <ul>
+                    <li> <a href="{{ route('all.sliders') }}"><i class="bx bx-right-arrow-alt"></i>View Sliders</a>
+                    </li>
+                    
+               </ul>
+          </li>
+
           <li>
                <a class="has-arrow" href="javascript:;">
                     <div class="parent-icon"><i class="bx bx-repeat"></i>
