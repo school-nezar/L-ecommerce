@@ -156,9 +156,9 @@ Route::prefix('admin')->group(function(){
     Route::prefix('slider')->group(function(){
 
         Route::get('/all/sliders',[SliderController::class, 'AllSliders'])->name('all.sliders');
-        Route::get('/add/notification',[NotificationController::class, 'ADDNotification'])->name('add.notification');
+        Route::get('/add/slider',[SliderController::class, 'ADDSlider'])->name('slider.add');
 
-        Route::post('/store',[NotificationController::class, 'StoreNotification'])->name('notification.store');
+        Route::post('/store',[SliderController::class, 'StoreSlider'])->name('slider.store');
 
         Route::get('/delete/notification/{id}',[NotificationController::class, 'DeleteNotification'])->name('notificcation.delete');
 
