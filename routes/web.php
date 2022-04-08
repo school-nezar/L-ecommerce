@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SiteInfoController;
+use App\Http\Controllers\Admin\ReviewController;
 
 
 
@@ -176,7 +177,16 @@ Route::prefix('admin')->group(function(){
 
         Route::post('/update/siteinfo',[SiteInfoController::class, 'UpdateSiteInfo'])->name('update.siteinfo');
        
-     
+
+    });
+
+
+    Route::prefix('review')->group(function(){
+
+        Route::get('/all/reviews',[ReviewController::class, 'AllReviews'])->name('all.reviews');
+
+      
+       
 
     });
 
