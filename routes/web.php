@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ProductCartController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\SiteInfoController;
 
 
 
@@ -164,6 +165,15 @@ Route::prefix('admin')->group(function(){
 
 
         Route::post('/update',[SliderController::class, 'UpdateSlider'])->name('slider.update');
+     
+
+    });
+
+
+    Route::prefix('siteinfo')->group(function(){
+
+        Route::get('/all/information',[SiteInfoController::class, 'AllInfornation'])->name('all.infos');
+       
      
 
     });
