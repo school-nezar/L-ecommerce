@@ -173,6 +173,8 @@ Route::prefix('admin')->group(function(){
     Route::prefix('siteinfo')->group(function(){
 
         Route::get('/all/information',[SiteInfoController::class, 'AllInfornation'])->name('all.infos');
+
+        Route::post('/update/siteinfo',[SiteInfoController::class, 'UpdateSiteInfo'])->name('update.siteinfo');
        
      
 
