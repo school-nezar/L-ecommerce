@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/dark-theme.css') }}" />
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/semi-dark.css') }}" />
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/header-colors.css') }}" />
-	<title>Rukada - Responsive Bootstrap 5 Admin Template</title>
+	<title>C.T.P - Creative team </title>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
